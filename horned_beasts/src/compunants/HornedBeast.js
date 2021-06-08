@@ -24,7 +24,7 @@ class HornedBeast extends React.Component {
             <h2>description</h2>
             <p>Mother (or father) rhino with two babies</p>
             <h2>keyword</h2>
-            <p>rhino</p>
+            <p>r hino</p>
             <h2>horns</h2>
             <p>2</p>
             <img
