@@ -1,16 +1,11 @@
 import React from 'react';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 class Footer extends React.Component {
   render() {
     return (
-      <div className="bigContainer">
-        <footer>
-        <p>
-        author: AbdallahAlabed &copy; 
-        </p>
-      
+        <footer className="jumbotron text-center">
+            <p>author: AbdallahAlabed &copy; </p>
         </footer>
-      </div>
     );
   }
 }
