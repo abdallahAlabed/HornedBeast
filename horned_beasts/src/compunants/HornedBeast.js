@@ -23,7 +23,6 @@ close=() =>{
 }
  
   render() {
-
     return (
         <Col>
           <Card style={{ width: "18rem" }} className="box">
