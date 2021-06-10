@@ -12,9 +12,7 @@ class Main extends React.Component {
     }
 filterImg = (e) => {
   e.preventDefault();
-
  this.setState({hornsForm : e.target.value}) ;
-  
 }
   render() {
     return (
@@ -38,30 +36,27 @@ filterImg = (e) => {
           {data.map((val, index) => {
             return (
              <> {
-              ((this.state.hornsForm === val.horns) &&(
+               this.state.hornsForm == val.horns &&
                 <HornedBeast
                 title={val.title}
                 description={val.description}
                 image_url={val.image_url}
                 horns={val.horns}
                 key={index}
-              /> )||(this.state.hornsForm === 99)  && 
-              (  <HornedBeast
+              /> || this.state.hornsForm == 99 &&   <HornedBeast
               title={val.title}
               description={val.description}
               image_url={val.image_url}
               horns={val.horns}
               key={index}
-            />)) 
+            />
               }
               </>
             )
           })}
         </Row>
-
       </main>
     );
   }
 }
 export default Main;
-
