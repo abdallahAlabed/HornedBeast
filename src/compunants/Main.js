@@ -2,7 +2,6 @@ import React from 'react';
 import HornedBeast from './HornedBeast.js';
 import data from './data.json';
 import Row from "react-bootstrap/Row";
-import SplitButton from 'react-bootstrap/SplitButton';
 import Form from "react-bootstrap/Form";
 class Main extends React.Component {
   constructor(props) {
@@ -39,20 +38,21 @@ filterImg = (e) => {
           {data.map((val, index) => {
             return (
              <> {
-               this.state.hornsForm == val.horns &&
+              ((this.state.hornsForm === val.horns) &&(
                 <HornedBeast
                 title={val.title}
                 description={val.description}
                 image_url={val.image_url}
                 horns={val.horns}
                 key={index}
-              /> || this.state.hornsForm == 99 &&   <HornedBeast
+              /> )||(this.state.hornsForm === 99)  && 
+              (  <HornedBeast
               title={val.title}
               description={val.description}
               image_url={val.image_url}
               horns={val.horns}
               key={index}
-            />
+            />)) 
               }
               </>
             )
